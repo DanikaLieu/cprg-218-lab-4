@@ -9,21 +9,22 @@
 }
 
 .hero-container {
-  color: #fff;
+  color: #191919;
   height: 100vh;
   position: relative; /* Add this to position the content inside */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+  padding: 20px; /* Add padding to create space around content */
+  box-sizing: border-box;
 }
-
+  
 .hero-image {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1400px; /* Make sure the image covers the entire container */
+  width: 100%; /* Make sure the image covers the entire container */
   height: 100%; /* Ensure the image covers the entire container */
   object-fit: cover; /* Maintain aspect ratio and cover the container */
   z-index: -1; /* Send the image to the background */
-  margin-right: 30px;
 }
 
 .Hero-Text {
@@ -33,24 +34,26 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  size: 16px;
 }
 
 .about {
   width: 100%;
-  padding: 10px; /* add units (px) to specify padding */
   background-color: #191919;
   height: 500px;
   display: flex; /* Add this to make children flex items */
   align-items: center; /* Vertically center align items */
+  padding: 20px; /* Add padding to create space around content */
+  box-sizing: border-box; /* Include padding in total height */
 }
 
 .about img {
-  height: 63%;
-  width: 63%; 
+  height: 64%;
+  width: 64%; 
   object-fit: cover;
   align-self: flex-start;
-  margin-left: -160px;
+  margin-left: -183px;
+  padding: 20px; /* Add padding to create space around content */
+  box-sizing: border-box;
 }
 
 .about-text {
@@ -91,7 +94,7 @@ button{
   border: 2px solid transparent;
   font-weight: bold;
   padding: 13px 30px;
-  border-radius: 30px;
+  border-radius: 0;
   transition: .4s;
 
 }
@@ -103,10 +106,29 @@ button:hover{
 
 }
 
-.accordion-container {
-  background-color: #fc7753;
-  color: #fff;
-  height: 600px;
+.accordion {
+  background-color: #191919;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 2px #6f0426;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #191919;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
 
 .footer-container {
@@ -114,4 +136,48 @@ button:hover{
   width: 100%;
   height: 300px;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    flex: 1 0 calc(100% - 20px);
+  }
+
+  .hero-container{
+    flex: 1 0 calc(100% - 20px);
+  }
+
+  .Hero-Text{
+    flex: 1 0 calc(100% - 20px);
+  }
+
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    flex: 1 0 calc(50% - 20px); 
+  }
+
+  .hero-container{
+    flex: 1 0 calc(50% - 20px);
+  }
+
+  .Hero-Text{
+    flex: 1 0 calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-image {
+    flex: 1 0 calc(33% - 20px);
+  }
+
+  .hero-container{
+    flex: 1 0 calc(33% - 20px);
+  }
+
+  .Hero-Text{
+    flex: 1 0 calc(33% - 20px);
+  }
+  
 }
