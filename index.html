@@ -8,9 +8,12 @@
   <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
   <link rel="stylesheet" type="text/css" href="/styles/global.css">
   <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <title>Common Website Features</title>
 </head>
 <body>
+  <section id="Hero">
   <div class="hero-container">
       <img class="hero-image" src="Assets/Roses.GIF" alt="Hero Image">
     <div class="Hero-Text">
@@ -18,7 +21,7 @@
     </div>
   </div>
   </section>
-  <section class="about">
+  <section id="about">
     <div class="main">
       <img src="Assets/PinkFlower.GIF" alt="Content Image">
       <div class="about-text">
@@ -28,41 +31,73 @@
       </div>
     </div>
   </section>
-    <button class="accordion">Section 1</button>
+  <section id="accordion">
+    <button class="accordion">Section 1<i class="fas fa-plus"></i></button>
     <div class="panel">
       <p>Lorem ipsum...</p>
     </div>
 
-    <button class="accordion">Section 2</button>
+    <button class="accordion">Section 2<i class="fas fa-plus"></i></button>
     <div class="panel">
       <p>Lorem ipsum...</p>
     </div>
 
-    <button class="accordion">Section 3</button>
+    <button class="accordion">Section 3<i class="fas fa-plus"></i></button>
     <div class="panel">
       <p>Lorem ipsum...</p>
     </div>
   </section>
-<script>
+  </section>
+  <script>
   var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      // Toggle between adding and removing the "active" class
+      this.classList.toggle("active");
+  
+      // Toggle between hiding and showing the active panel
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+        this.querySelector('i').classList.remove('fa-minus');
+        this.querySelector('i').classList.add('fa-plus');
+      } else {
+        panel.style.display = "block";
+        this.querySelector('i').classList.remove('fa-plus');
+        this.querySelector('i').classList.add('fa-minus');
+      }
+    });
+  }
 </script>
+  
+<section>
+  <div class="footer-container">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <p>kjDHFKAJBHD.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Link</h4>
+        <ul>
+          <li><a href="#Hero">Home</a></li>
+          <li><a href="#about">Content</a></li>
+          <li><a href="#accordion">Accordion</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40100.73097598687!2d-114.07015675136715!3d51.0845504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537164eb770c4b2f%3A0x167002298e88339b!2sBloomex%20Calgary%20Flowers%20%26%20Gift%20Baskets!5e0!3m2!1sen!2sca!4v1709619596096!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+  </div>
+</footer>
+</section>
 
 </body>
 </html>
