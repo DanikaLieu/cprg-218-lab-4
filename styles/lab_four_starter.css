@@ -79,7 +79,7 @@
 }
 
 
-button{
+.but-ton {
   background-color: #6f0426;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -88,14 +88,23 @@ button{
   padding: 13px 30px;
   border-radius: 0;
   transition: .4s;
-
+  position: relative; /* Add position relative to create a positioning context */
 }
 
-button:hover{
+button:hover {
   background-color: transparent;
   border: 2px solid #6f0426;
   cursor: pointer;
+}
 
+/* Create the arrow using CSS pseudo-elements */
+.but-ton::after {
+  content: "\203A"; /* Unicode for a right arrow */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
 }
 
 .accordion {
@@ -108,7 +117,7 @@ button:hover{
   border: 2px #6f0426;
   outline: none;
   transition: 0.4s;
-  padding-bottom: 5%;
+  font-size: 16px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -119,23 +128,20 @@ button:hover{
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background: linear-gradient(to right, #6f0426, #191919);
+  background-color: #191919;
   display: none;
   overflow: hidden;
   color: #fcfc;
+}
+
+.panel p {
+  margin-bottom: 30px;
 }
 
 /* Style the plus and minus icons */
 .accordion i {
   float: right;
 }
-
-
-/* Hide the minus icon by default */
-.panel {
-  display: none;
-}
-
 
 
 .footer-container  {
