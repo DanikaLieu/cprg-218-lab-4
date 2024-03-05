@@ -37,7 +37,13 @@
   padding-bottom: 5%;
 }
 
-.about img {
+.about-text {
+  flex: 1; /* Let the text content take remaining space */
+  padding: 0 20px; /* Add padding for spacing */
+  margin: 0 20px;
+}
+
+.main img{
   height: 64%;
   width: 64%; 
   align-self: flex-start;
@@ -45,13 +51,7 @@
   margin: 20px 20px; /* Add padding to create space around content */
   box-sizing: border-box;
   flex: 1;
-  margin-left: -20px;
-}
-
-.about-text {
-  flex: 1; /* Let the text content take remaining space */
-  padding: 0 20px; /* Add padding for spacing */
-  margin: 0 20px;
+  margin-left: -100px;
 }
 
 .main {
