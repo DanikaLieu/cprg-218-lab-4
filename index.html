@@ -99,16 +99,22 @@
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2024 Danika Lieu. All rights reserved.</p>
-  </div>
-</footer>
-</section>
 
-<script>
-  const currentYear = new Date().getFullYear();
-  document.getElementById('copyright').innerHTML = `&copy; ${currentYear} Danika Lieu. All rights reserved.`;
-</script>
+<div class="copyrightYear">
+  <script>
+    window.onload = function() {
+      var currentDate = new Date().getFullYear();
+      var copyrightElement = document.getElementById('copyright');
+      copyrightElement.innerHTML = '&copy; ' + currentDate + ' Danika Lieu. All rights reserved.';
+    };
+  </script>
+</div>
+
+<div class="footer-bottom">
+  <footer>
+    <p id="copyright"></p>
+  </footer>
+</div>
 
 </body>
 </html>
