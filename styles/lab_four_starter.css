@@ -25,6 +25,9 @@
   transform: translate(-50%, -50%);
   color: white;
   font-size: 30px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 #about {
@@ -35,6 +38,7 @@
   align-items: center; /* Vertically center align items */
   justify-content: flex-start;
   padding-bottom: 5%;
+  background-image: linear-gradient(rgba(103, 39, 39, 0.5));
 }
 
 .about-text {
@@ -69,6 +73,9 @@
   text-transform: capitalize;
   margin-bottom: 20px;
   margin-left: 60px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .about-text p {
@@ -77,6 +84,9 @@
   line-height: 28px;
   font-size: 18px;
   margin-bottom: 45px;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 
@@ -89,18 +99,18 @@
   padding: 13px 30px;
   border-radius: 0;
   transition: .4s;
-  position: relative; /* Add position relative to create a positioning context */
+  position: relative; 
 }
 
-button:hover {
+.but-ton:hover {
   background-color: transparent;
   border: 2px solid #6f0426;
   cursor: pointer;
 }
 
-/* Create the arrow using CSS pseudo-elements */
+
 .but-ton::after {
-  content: "\203A"; /* Unicode for a right arrow */
+  content: "\203A"; 
   position: absolute;
   right: 10px;
   top: 50%;
@@ -119,9 +129,11 @@ button:hover {
   outline: none;
   transition: 0.4s;
   font-size: 16px;
+  background-image: linear-gradient(rgba(103, 39, 39, 0.5));
+  
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
 .active, .accordion:hover {
   background-color: #191919;
 }
