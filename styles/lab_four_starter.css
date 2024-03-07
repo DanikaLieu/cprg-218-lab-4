@@ -108,6 +108,11 @@
   cursor: pointer;
 }
 
+.but-ton a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  }
+
 
 .but-ton::after {
   content: "\203A"; 
