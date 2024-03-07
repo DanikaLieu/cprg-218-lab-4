@@ -52,7 +52,7 @@
   width: 64%; 
   align-self: flex-start;
   padding: 0 20px;
-  margin: 20px 20px; /* Add padding to create space around content */
+  margin: 20px 20px;
   box-sizing: border-box;
   flex: 1;
   margin-left: -100px;
@@ -255,45 +255,53 @@
 
 
 @media (max-width: 768px) {
-  .hero-image {
-    flex: 1 0 calc(100% - 20px);
+  .hero-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+  .Hero-Text {
+    font-size: 24px; /* Decrease font size for smaller screens */
+    margin-top: 20px; /* Add margin to separate text from image */
   }
 
-  .hero-container{
-    flex: 1 0 calc(100% - 20px);
+  .main img {
+    height: auto; /* Allow the image to scale proportionally */
+    width: 100%; /* Make image full width on smaller screens */
+    max-width: 300px; /* Set max-width for better responsiveness */
   }
 
-  .Hero-Text{
-    flex: 1 0 calc(100% - 20px);
+  .main {
+    width: 100%; /* Make main section full width for smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
   }
 
-}
+  .about-text h1 {
+    margin-left: 0; /* Reset margin for smaller screens */
 
-@media (min-width: 768px) {
-  .hero-image {
-    flex: 1 0 calc(50% - 20px); 
   }
 
-  .hero-container{
-    flex: 1 0 calc(50% - 20px);
-  }
 
-  .Hero-Text{
-    flex: 1 0 calc(50% - 20px);
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero-container,
+  .hero-image,
+  .Hero-Text {
+    flex: 1 0 calc(50% - 20px); /* Adjust width for medium screens */
   }
 }
 
 @media (min-width: 1200px) {
-  .hero-image {
-    flex: 1 0 calc(33% - 20px);
+  .hero-container,
+  .hero-image,
+  .Hero-Text {
+    flex: 1 0 calc(33% - 20px); /* Adjust width for large screens */
   }
 
-  .hero-container{
-    flex: 1 0 calc(33% - 20px);
+  .main {
+    max-width: 95%; /* Adjust max width for large screens */
   }
 
-  .Hero-Text{
-    flex: 1 0 calc(33% - 20px);
+  .about-text h1 {
+    margin-left: 60px; /* Reset margin for large screens */
   }
-  
 }
