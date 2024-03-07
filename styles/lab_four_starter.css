@@ -134,16 +134,16 @@
   outline: none;
   transition: 0.4s;
   font-size: 16px;
-  background-image: linear-gradient(rgba(103, 39, 39, 0.5));
-  
+  background-image: linear-gradient(rgba(103, 39, 39, 0.5)); 
 }
 
 
 .active, .accordion:hover {
   background-color: #191919;
+  border: 2px solid #6f0426;
+  cursor: pointer;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
   background-color: #191919;
@@ -254,54 +254,54 @@
 }
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
   .hero-container {
-    padding: 10px; /* Adjust padding for smaller screens */
+    height: auto; 
   }
-  
+
   .Hero-Text {
-    font-size: 24px; /* Decrease font size for smaller screens */
-    margin-top: 20px; /* Add margin to separate text from image */
+    position: static; 
+    transform: none; 
+    padding: 20px; 
+  }
+
+  #about {
+    height: auto; 
+    flex-direction: column; 
+  }
+
+  .main {
+    flex-direction: column; 
   }
 
   .main img {
-    height: auto; /* Allow the image to scale proportionally */
-    width: 100%; /* Make image full width on smaller screens */
-    max-width: 300px; /* Set max-width for better responsiveness */
+    height: auto; 
+    width: 100%; 
+    margin-left: 0; 
   }
 
-  .main {
-    width: 100%; /* Make main section full width for smaller screens */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
+  .about-text {
+    margin: 20px 0; 
   }
 
-  .about-text h1 {
-    margin-left: 0; /* Reset margin for smaller screens */
-
-  }
-
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .hero-container,
-  .hero-image,
-  .Hero-Text {
-    flex: 1 0 calc(50% - 20px); /* Adjust width for medium screens */
+  .footer-col {
+    width: 50%; 
+    margin-bottom: 30px; 
   }
 }
 
-@media (min-width: 1200px) {
-  .hero-container,
-  .hero-image,
-  .Hero-Text {
-    flex: 1 0 calc(33% - 20px); /* Adjust width for large screens */
-  }
 
+@media (min-width: 768px) and (max-width: 1199px) {
   .main {
-    max-width: 95%; /* Adjust max width for large screens */
+    width: 90%; 
   }
 
   .about-text h1 {
-    margin-left: 60px; /* Reset margin for large screens */
+    font-size: 32px; 
+  }
+
+  .about-text p {
+    font-size: 16px; 
   }
 }
